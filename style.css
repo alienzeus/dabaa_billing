@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #260242;
+}
+
+#app {
+    width: 600px;
+}
+
+.logo {
+    height: 200px;
+    width: 200px;
+}
+
+.logo-1 {
+    text-align: center;
+}
+
+.login-container, .billing-container {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(32, 32, 30, 0.1); 
+}
+
+h2 {
+    margin-top: 0;
+}
+
+input[type="text"], input[type="number"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+
+
+h5 {
+    text-align: center;
+    color: white;
+}
+
+a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer{
+    margin-top: 100px;
+}
