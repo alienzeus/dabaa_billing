@@ -26,7 +26,22 @@ function addItem() {
     newRow.insertCell(2).innerText = price.toFixed(2);
     newRow.insertCell(3).innerText = total.toFixed(2);
 
+    // Create delete button
+    const deleteCell = newRow.insertCell(4);
+    const deleteButton = document.createElement('button');
+    deleteButton.innerHTML = 'Delete';
+    deleteButton.onclick = function() {
+        deleteItem(newRow, total);
+    };
+    deleteCell.appendChild(deleteButton);
+
     updateTotalAmount(total);
+}
+
+function deleteItem(row, total) {
+    const tableBody = document.getElementById('billingTableBody');
+    tableBody.removeChild(row);
+    updateTotalAmount(-total);
 }
 
 function updateTotalAmount(amount) {
@@ -35,6 +50,7 @@ function updateTotalAmount(amount) {
     const newTotal = currentTotal + amount;
     totalAmountElem.innerText = newTotal.toFixed(2);
 }
+
 
 function generateInvoice() {
     const tableBody = document.getElementById('billingTableBody').innerHTML;
